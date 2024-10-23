@@ -1,0 +1,14 @@
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\Ecommerce.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\Ecommerce.AssemblyInfoInputs.cache
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\Ecommerce.AssemblyInfo.cs
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\Ecommerce.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\source\repos\Ecommerce\bin\Debug\net8.0\Ecommerce.exe
+C:\Users\Aluno\source\repos\Ecommerce\bin\Debug\net8.0\Ecommerce.deps.json
+C:\Users\Aluno\source\repos\Ecommerce\bin\Debug\net8.0\Ecommerce.runtimeconfig.json
+C:\Users\Aluno\source\repos\Ecommerce\bin\Debug\net8.0\Ecommerce.dll
+C:\Users\Aluno\source\repos\Ecommerce\bin\Debug\net8.0\Ecommerce.pdb
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\Ecommerce.dll
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\refint\Ecommerce.dll
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\Ecommerce.pdb
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\Ecommerce.genruntimeconfig.cache
+C:\Users\Aluno\source\repos\Ecommerce\obj\Debug\net8.0\ref\Ecommerce.dll

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace Ecommerce
@@ -9,12 +9,12 @@ namespace Ecommerce
         public string Nome { get; private set; }
 
         public Categoria(string nome)
-        {
+        { 
             Nome = nome;
         }
     }
 
-
+    
     public class Fornecedor
     {
         public string Nome { get; private set; }
@@ -25,7 +25,7 @@ namespace Ecommerce
         }
     }
 
-
+    
     public class Produto
     {
         public string Nome { get; private set; }
@@ -53,7 +53,7 @@ namespace Ecommerce
             do
             {
                 Console.WriteLine("BEM VINDO AO MEU ERP DE VENDAS DE CELULARES");
-                separador('=', 100);
+                Separador('=', 100);
                 Console.WriteLine("CADASTRO GERAL DO SISTEMA");
                 Console.WriteLine("(1) - Cadastro de Categorias");
                 Console.WriteLine("(2) - Cadastro de Fornecedores");
@@ -69,22 +69,22 @@ namespace Ecommerce
                 switch (opcao)
                 {
                     case 1:
-                        modulo_categoria();
+                        ModuloCategoria();
                         break;
                     case 2:
-                        modulo_fornecedor();
+                        ModuloFornecedor();
                         break;
                     case 3:
-                        modulo_produto();
+                        ModuloProduto();
                         break;
                     case 4:
-                        listar_categorias();
+                        ListarCategorias();
                         break;
                     case 5:
-                        listar_fornecedores();
+                        ListarFornecedores();
                         break;
                     case 6:
-                        listar_produtos();
+                        ListarProdutos();
                         break;
                     case 0:
                         Console.WriteLine("Saindo...");
@@ -97,7 +97,7 @@ namespace Ecommerce
             } while (opcao != 0);
         }
 
-        static void separador(char simbolo, int quantidade)
+        static void Separador(char simbolo, int quantidade)
         {
             for (int i = 0; i < quantidade; i++)
             {
@@ -106,7 +106,7 @@ namespace Ecommerce
             Console.Write("\n");
         }
 
-        static void modulo_categoria()
+        static void ModuloCategoria()
         {
             Console.WriteLine("Digite o nome da nova categoria (ex: Smartphones, Acessórios, etc.): ");
             string nome = Console.ReadLine();
@@ -114,7 +114,7 @@ namespace Ecommerce
             Console.WriteLine("Categoria cadastrada com sucesso!");
         }
 
-        static void modulo_fornecedor()
+        static void ModuloFornecedor()
         {
             Console.WriteLine("Digite o nome do fornecedor (ex: Samsung, Apple, Xiaomi): ");
             string nome = Console.ReadLine();
@@ -122,24 +122,24 @@ namespace Ecommerce
             Console.WriteLine("Fornecedor cadastrado com sucesso!");
         }
 
-        static void modulo_produto()
+        static void ModuloProduto()
         {
             Console.WriteLine("Digite o nome do produto (ex: iPhone 13, Galaxy S21): ");
             string nome = Console.ReadLine();
 
             Console.WriteLine("Escolha uma categoria para o produto: ");
-            listar_categorias();
+            ListarCategorias();
             int categoriaEscolhida = int.Parse(Console.ReadLine()) - 1;
 
             Console.WriteLine("Escolha um fornecedor para o produto: ");
-            listar_fornecedores();
+            ListarFornecedores();
             int fornecedorEscolhido = int.Parse(Console.ReadLine()) - 1;
 
             produtos.Add(new Produto(nome, categorias[categoriaEscolhida], fornecedores[fornecedorEscolhido]));
             Console.WriteLine("Produto cadastrado com sucesso!");
         }
 
-        static void listar_categorias()
+        static void ListarCategorias()
         {
             if (categorias.Count > 0)
             {
@@ -155,7 +155,7 @@ namespace Ecommerce
             }
         }
 
-        static void listar_fornecedores()
+        static void ListarFornecedores()
         {
             if (fornecedores.Count > 0)
             {
@@ -171,7 +171,7 @@ namespace Ecommerce
             }
         }
 
-        static void listar_produtos()
+        static void ListarProdutos()
         {
             if (produtos.Count > 0)
             {

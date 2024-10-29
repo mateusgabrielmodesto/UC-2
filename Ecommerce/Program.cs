@@ -4,47 +4,12 @@ using System.Collections.Generic;
 namespace Ecommerce
 {
 
-    public class Categoria
-    {
-        public string Nome { get; private set; }
-
-        public Categoria(string nome)
-        { 
-            Nome = nome;
-        }
-    }
-
-    
-    public class Fornecedor
-    {
-        public string Nome { get; private set; }
-
-        public Fornecedor(string nome)
-        {
-            Nome = nome;
-        }
-    }
-
-    
-    public class Produto
-    {
-        public string Nome { get; private set; }
-        public Categoria Categoria { get; private set; }
-        public Fornecedor Fornecedor { get; private set; }
-
-        public Produto(string nome, Categoria categoria, Fornecedor fornecedor)
-        {
-            Nome = nome;
-            Categoria = categoria;
-            Fornecedor = fornecedor;
-        }
-    }
-
     internal class Program
     {
         static List<Categoria> categorias = new List<Categoria>();
         static List<Fornecedor> fornecedores = new List<Fornecedor>();
         static List<Produto> produtos = new List<Produto>();
+       
 
         static void Main(string[] args)
         {
@@ -109,23 +74,39 @@ namespace Ecommerce
         static void ModuloCategoria()
         {
             Console.WriteLine("Digite o nome da nova categoria (ex: Smartphones, Acessórios, etc.): ");
-            string nome = Console.ReadLine();
-            categorias.Add(new Categoria(nome));
+            string nomeCategoria = Console.ReadLine();
+
+            var categoria = new Categoria
+            {
+                Nome = nomeCategoria
+            };
+
+            categorias.Add(categoria);
+
             Console.WriteLine("Categoria cadastrada com sucesso!");
         }
 
         static void ModuloFornecedor()
         {
             Console.WriteLine("Digite o nome do fornecedor (ex: Samsung, Apple, Xiaomi): ");
-            string nome = Console.ReadLine();
-            fornecedores.Add(new Fornecedor(nome));
+            string nomeFornecedor = Console.ReadLine();
+
+            Console.WriteLine("Digite o CNPJ do fornecedor");
+            string CnpjFornecedor = Console.ReadLine();
+
+            var fornecedor = new Fornecedor()
+            {
+                Nome = nomeFornecedor + "\n   CNPJ: " + CnpjFornecedor
+            };
+
+            fornecedores.Add(fornecedor);
             Console.WriteLine("Fornecedor cadastrado com sucesso!");
         }
 
         static void ModuloProduto()
         {
             Console.WriteLine("Digite o nome do produto (ex: iPhone 13, Galaxy S21): ");
-            string nome = Console.ReadLine();
+            string nomeProduto = Console.ReadLine();
 
             Console.WriteLine("Escolha uma categoria para o produto: ");
             ListarCategorias();
@@ -135,7 +116,14 @@ namespace Ecommerce
             ListarFornecedores();
             int fornecedorEscolhido = int.Parse(Console.ReadLine()) - 1;
 
-            produtos.Add(new Produto(nome, categorias[categoriaEscolhida], fornecedores[fornecedorEscolhido]));
+            var produto = new Produto
+            {
+                Nome = nomeProduto,
+                Categoria = categorias[categoriaEscolhida],
+                Fornecedor = fornecedores[fornecedorEscolhido],
+            };
+
+            produtos.Add(produto);
             Console.WriteLine("Produto cadastrado com sucesso!");
         }
 

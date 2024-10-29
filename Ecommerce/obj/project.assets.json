@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\source\\repos\\Ecommerce\\Ecommerce.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Downloads\\UC-2-main\\UC-2-main\\Ecommerce\\Ecommerce.csproj",
       "projectName": "Ecommerce",
-      "projectPath": "C:\\Users\\Aluno\\source\\repos\\Ecommerce\\Ecommerce.csproj",
+      "projectPath": "C:\\Users\\Aluno\\Downloads\\UC-2-main\\UC-2-main\\Ecommerce\\Ecommerce.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\source\\repos\\Ecommerce\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\Downloads\\UC-2-main\\UC-2-main\\Ecommerce\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
